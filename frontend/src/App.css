@@ -1,0 +1,111 @@
+:root{
+    font-family: "Tiny5", sans-serif;
+
+    --color-base: #d3cfc7;
+    background-color: #0b97a2;
+}
+
+.App {
+    text-align: center;
+}
+
+.taskWriter-wrapper{
+    text-align: center;
+    background-color: var(--color-base);
+    padding: 10px;
+    min-width: 250px;
+    margin: 20px auto 0;
+    width: max(400px,40%);
+    border-right: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-left: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+
+    margin-bottom: 60px;
+}
+
+.taskWriter-wrapper h1{
+    margin: 0 auto;
+    font-size: 60px;
+    margin-bottom: 20px;
+    grid-column: 1 / -1;
+}
+
+.taskWriter-wrapper .taskWriter-inputs {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    justify-content: center;
+    text-align: center;
+    gap: 0.2em;
+}
+
+.taskWriter-wrapper input {
+    background-color: white;
+    border: solid;
+    padding: 5px;
+    height: 25px;
+    border-left: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-right: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    outline: none;
+}
+button {
+    font-family: "Tiny5", sans-serif;
+    background-color: var(--color-base);
+    border-right: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-left: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-style: outset;
+}
+button:hover {
+    cursor: pointer;
+}
+button:active {
+    cursor: pointer;
+    background-color: var(--color-base);
+    border-left: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-right: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+}
+
+.modal-close{
+    display: none;
+}
+
+.warningModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: var(--color-base);
+    border-right: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-left: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    padding: 2em;
+}
+.warningModal h1{
+    translate: 0px -20px;
+}
+
+.warningModal button{
+    font-size: 20px;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+@media (max-width: 1100px){
+    .App {
+        display: block;
+    }
+    .taskWriter-wrapper {
+        width: 80%;
+        justify-self: center;
+        min-width: 250px;
+        margin-top: 20px
+    }
+}

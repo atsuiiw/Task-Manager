@@ -1,0 +1,118 @@
+.tasklist-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+    width: 90%;
+    justify-self: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.taskgroup h1, .feed-wrapper{
+    background-color: var(--color-base);
+    border-right: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-left: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+}
+
+.taskgroup{
+    width: 100%;
+}
+
+.taskgroup h1{
+    padding: 10px;
+}
+
+.feed-wrapper {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+.feed-wrapper h1{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    margin: 0 auto !important;
+}
+.feed-wrapper h2{
+    margin: 0 auto !important;
+}
+
+.feed-content {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.feed-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.feed-buttons button {
+    padding: 8px 16px;
+    outline: none;
+    height: 35px;
+}
+
+.editModal{
+    display: grid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 280px;
+    padding: 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    border-right: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-bottom: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-left: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    background-color: var(--color-base);
+    z-index: 20;
+    gap: 0.3em;
+}
+.editModal h1{
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+}
+.editModal input, .editModal button{
+    height: 30px;
+    outline: none;
+}
+.editModal input {
+    padding: 0px 5px 0 5px;
+    border-left: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-right: solid color-mix(in srgb, var(--color-base), white 50%) 2px; 
+    border-bottom: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+}
+select {
+    border-left: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-top: solid color-mix(in srgb, var(--color-base), black 50%) 2px;
+    border-right: solid color-mix(in srgb, var(--color-base), white 50%) 2px; 
+    border-bottom: solid color-mix(in srgb, var(--color-base), white 50%) 2px;
+    background-color: white;
+}
+
+.sort-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+}
+
+@media (max-width: 800px){
+    .tasklist-wrapper{
+        display: block;
+    }
+    .taskgroup{
+        margin-bottom: 10px;
+    }
+}
