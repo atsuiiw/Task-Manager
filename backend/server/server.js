@@ -11,9 +11,10 @@ import { connectDB } from "./db/db.js";
 // Variable
 const app = express();
 const PORT = process.env.PORT;
+const frontend = process.env.VERCEL_URI;
 
 app.use(cors({
-        origin: "http://localhost:5173"
+        origin: frontend
     })
 );
 
