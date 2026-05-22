@@ -14,7 +14,9 @@ const PORT = process.env.PORT;
 const frontend = process.env.VERCEL_URI;
 
 app.use(cors({
-        origin: frontend
+        origin: frontend,
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
     })
 );
 
